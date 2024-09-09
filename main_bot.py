@@ -1,11 +1,12 @@
+import nest_asyncio
+nest_asyncio.apply()
+
 from telegram import Update, InputMediaPhoto
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 import g4f
-import nest_asyncio
-nest_asyncio.apply()
 
 # Функция для обработки запроса и получения ответа от API
 def get_car_part_info(messages: list) -> str:
@@ -53,20 +54,20 @@ async def handle_message(update: Update, context):
 {user_message}
 заполни эти данные 
 
-Производитель    
-Тип    
-Назначение    
-Марка    
-Модель напиши все на которые подходит
-Двигатель напиши все на которые подходит
-Объем напиши объемы которые подходят 
-Год    
+Производитель:    
+Тип:    
+Назначение:
+Марка:    
+Модель: напиши все на которые подходит
+Двигатель: напиши все на которые подходит 
+Объем: напиши объемы которые подходят 
+Год:    
 Артикул оставь пустым
 Номер OEM оставь пустым 
-Напиши вес     
-Напиши длину 
-Напиши высоту
-Напиши ширину 
+вес:напиши применый вес     
+длину:напиши применую длину
+высоту:напиши примерную высоту
+ширину:напиши примерную ширину
 И в конце напиши на 150 слов мини описание.
 """
 
@@ -105,3 +106,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
