@@ -4,6 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 import g4f
+import nest_asyncio
+nest_asyncio.apply()
 
 # Функция для обработки запроса и получения ответа от API
 def get_car_part_info(messages: list) -> str:
